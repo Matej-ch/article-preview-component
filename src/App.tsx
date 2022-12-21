@@ -1,34 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import IArticle from "./IArticle";
+import ArticlePreview from "./ArticlePreview";
+import articleImage from './assets/drawers.jpg'
+import authorImage from './assets/avatar-michelle.jpg'
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    const article: IArticle = {
+        headline: 'Shift the overall look and feel by adding these wonderful touches to furniture in your home',
+        body: 'Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I\'ve got some simple tips to help you make any room feel complete.',
+        author: 'Michelle Appleton',
+        date: '28 Jun 2020',
+        articleImage: articleImage,
+        authorImage: authorImage,
+    }
+
+    return (<ArticlePreview article={article}/>)
 }
 
 export default App

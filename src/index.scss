@@ -1,0 +1,69 @@
+:root {
+  font-size: 16px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --darkGrayBlue: hsl(217, 19%, 35%);
+  --desatruatedDarkBlue: hsl(214, 17%, 51%);
+  --grayBlue: hsl(212, 23%, 69%);
+  --lightGrayBlue: hsl(210, 46%, 95%);
+
+  --ff-base: 'Manrope', sans-serif;
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fs-base: 16px;
+  --fs-paragraph: 13px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--lightGrayBlue);
+
+  display: grid;
+  place-content: center;
+  margin: 1rem;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.flex-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}

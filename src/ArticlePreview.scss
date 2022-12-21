@@ -1,0 +1,129 @@
+.article-preview {
+  --bc-color: white;
+  --padding: 1.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+
+  overflow: hidden;
+  max-width: 600px;
+  border-radius: 8px;
+
+  background-color: var(--bc-color);
+
+  .info-wrapper {
+    padding: var(--padding);
+  }
+
+  .headline {
+    font-size: var(--fs-base);
+    color: var(--darkGrayBlue);
+    padding-bottom: var(--padding);
+    font-weight: var(--fw-bold);
+  }
+
+  .body {
+    font-size: var(--fs-paragraph);
+    color: var(--desatruatedDarkBlue);
+    padding-bottom: var(--padding);
+  }
+
+  .author-picture {
+    max-width: 50px;
+    border-radius: 100%;
+  }
+
+  .author-name {
+    color: var(--darkGrayBlue);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-paragraph);
+  }
+
+  .article-date {
+    color: var(--desatruatedDarkBlue);
+    font-size: var(--fs-paragraph);
+    padding-top: .25rem;
+  }
+}
+
+.share-btn {
+  background-color: var(--lightGrayBlue);
+  margin-left: auto;
+  padding: 0.75rem;
+  border-radius: 100%;
+}
+
+.modal-holder {
+
+  position: relative;
+
+  .share-modal {
+    background-color: var(--darkGrayBlue);
+    display: flex;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 1.5rem;;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    gap: 1rem;
+
+    span {
+      color: var(--grayBlue);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: var(--fs-paragraph);
+      font-weight: var(--fw-regular);
+    }
+
+    .share-btn {
+      background-color: var(--desatruatedDarkBlue);
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .article-preview {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    picture > img {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+
+    .headline {
+      font-size: 1.25rem;
+    }
+  }
+
+  .modal-holder {
+    .share-modal {
+      border-radius: 8px;
+      width: unset;
+      padding: 1rem 2rem;
+      bottom: 5rem;
+      left: unset;
+      right: -4rem;
+
+      .share-btn {
+        display: none;
+      }
+
+      .arrow-down {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+
+        border-top: 10px solid var(--darkGrayBlue);
+
+        right: 6rem;
+        top: 50px;
+      }
+    }
+  }
+}
